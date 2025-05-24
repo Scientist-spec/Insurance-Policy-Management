@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payments</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Payment History</h1>
+    <table border="1">
+        <tr>
+            <th>Payment ID</th><th>Purchase ID</th><th>Payment Date</th><th>Amount Paid</th>
+        </tr>
+        {% for payment in payments %}
+        <tr>
+            <td>{{ payment.payment_id }}</td>
+            <td>{{ payment.purchase_id }}</td>
+            <td>{{ payment.payment_date }}</td>
+            <td>{{ payment.amount_paid }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/">← Back to Dashboard</a>
+</body>
+</html>

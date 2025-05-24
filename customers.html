@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>Customers</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Customer List</h2>
+    <table border="1">
+        <tr><th>ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Address</th><th>DOB</th></tr>
+        {% for c in customers %}
+        <tr>
+            <td>{{ c.customer_id }}</td>
+            <td>{{ c.name }}</td>
+            <td>{{ c.email }}</td>
+            <td>{{ c.phone }}</td>
+            <td>{{ c.address }}</td>
+            <td>{{ c.dob }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br><a href="/">← Back</a>
+</body>
+</html>

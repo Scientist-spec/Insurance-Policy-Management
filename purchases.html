@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Purchases</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Policy Purchases</h1>
+    <table border="1">
+        <tr>
+            <th>Purchase ID</th><th>Customer ID</th><th>Policy ID</th><th>Purchase Date</th><th>Premium Due Date</th>
+        </tr>
+        {% for purchase in purchases %}
+        <tr>
+            <td>{{ purchase.purchase_id }}</td>
+            <td>{{ purchase.customer_id }}</td>
+            <td>{{ purchase.policy_id }}</td>
+            <td>{{ purchase.purchase_date }}</td>
+            <td>{{ purchase.premium_due_date }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/">← Back to Dashboard</a>
+</body>
+</html>

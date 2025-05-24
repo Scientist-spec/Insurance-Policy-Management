@@ -1,0 +1,24 @@
+<h2>Add Purchase</h2>
+<form method="POST">
+    <label>Customer:</label>
+    <select name="customer_id">
+        {% for c in customers %}
+            <option value="{{ c.customer_id }}">{{ c.name }}</option>
+        {% endfor %}
+    </select><br>
+
+    <label>Policy:</label>
+    <select name="policy_id">
+        {% for p in policies %}
+            <option value="{{ p.policy_id }}">{{ p.policy_name }}</option>
+        {% endfor %}
+    </select><br>
+
+    <label>Purchase Date:</label>
+    <input type="date" name="purchase_date" required><br>
+
+    <label>Premium Due Date:</label>
+    <input type="date" name="premium_due_date" required><br>
+
+    <button type="submit">Add Purchase</button>
+</form>

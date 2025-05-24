@@ -1,0 +1,31 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Insurance Dashboard</title>
+</head>
+<body>
+    <h1>Insurance Dashboard</h1>
+    <ul>
+        <li>Total Customers: {{ customers }}</li>
+        <li>Total Policies: {{ policies }}</li>
+        <li>Total Purchases: {{ purchases }}</li>
+        <li>Total Claims: {{ claims }}</li>
+    </ul>
+
+    <h2>Navigation</h2>
+    <ul>
+        <li><a href="/customers">View Customers</a></li>
+        <li><a href="/add-customer">Add Customer</a></li>
+        <li><a href="/add-policy">Add Policy</a></li>
+        <li><a href="/add-purchase">Add Purchase</a></li>
+        <li><a href="/add-payment">Add Payment</a></li>
+        <li><a href="/add-claim">Add Claim</a></li>
+        <li><a href="/policies">View Policies</a></li>
+        <li><a href="/purchases">View Purchases</a></li>
+        <li><a href="/payments">View Payments</a></li>
+        <li><a href="/claims">View Claims</a></li>
+    </ul>
+</body>
+</html>

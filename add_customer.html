@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Add Customer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Add New Customer</h2>
+    <form method="POST">
+        <label>Name:</label><input type="text" name="name" required><br>
+        <label>Email:</label><input type="email" name="email" required><br>
+        <label>Phone:</label><input type="text" name="phone" required><br>
+        <label>Address:</label><input type="text" name="address" required><br>
+        <label>Date of Birth:</label><input type="date" name="dob" required><br><br>
+        <input type="submit" value="Add Customer">
+    </form>
+    <br><a href="/">← Back</a>
+</body>
+</html>

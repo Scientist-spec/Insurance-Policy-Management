@@ -1,0 +1,23 @@
+<h2>Add Claim</h2>
+<form method="POST">
+    <label>Purchase:</label>
+    <select name="purchase_id">
+        {% for p in purchases %}
+            <option value="{{ p.purchase_id }}">{{ p.info }}</option>
+        {% endfor %}
+    </select><br>
+    <label>Claim Date:</label>
+    <input type="date" name="claim_date" required><br>
+
+    <label>Claim Amount:</label>
+    <input type="number" name="claim_amount" required><br>
+
+    <label>Status:</label>
+    <select name="status">
+        <option>Approved</option>
+        <option>Pending</option>
+        <option>Rejected</option>
+    </select><br>
+
+    <button type="submit">Add Claim</button>
+</form>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Claims</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Claim Records</h1>
+    <table border="1">
+        <tr>
+            <th>Claim ID</th><th>Purchase ID</th><th>Claim Date</th><th>Claim Amount</th><th>Status</th>
+        </tr>
+        {% for claim in claims %}
+        <tr>
+            <td>{{ claim.claim_id }}</td>
+            <td>{{ claim.purchase_id }}</td>
+            <td>{{ claim.claim_date }}</td>
+            <td>{{ claim.claim_amount }}</td>
+            <td>{{ claim.status }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/">← Back to Dashboard</a>
+</body>
+</html>
